@@ -1,6 +1,6 @@
-# Uber Data Analytics Dashboard
+# Uber Ride Bookings Dashboard
 
-A comprehensive data visualization dashboard for analyzing Uber ride-sharing business metrics and performance indicators for the year 2024.
+This project looks at 150,000 Uber bookings from 2024. The dashboard was built in Power BI to understand completed rides, cancellations, revenue, vehicle types, and ratings.
 
 ## 🎬 Project Showcase
 
@@ -8,60 +8,62 @@ A comprehensive data visualization dashboard for analyzing Uber ride-sharing bus
   <img src="Project%20Showcase/Dasboard.gif" alt="Dashboard Demo" width="600">
 </p>
 
-<div align="center">
-  <h3><strong>Don't forget to leave a star ⭐️</strong></h3>
-</div>
+## Dashboard Overview
 
-## 📊 Dashboard Overview
-
-This interactive dashboard provides insights into various aspects of Uber's ride-sharing operations, including booking patterns, vehicle performance, revenue analysis, cancellation trends, and rating distributions.
+The dashboard covers booking patterns, vehicle performance, payment methods, cancellation reasons, and customer and driver ratings.
 
 ### Key Metrics Summary (2024)
-- **Total Bookings**: 148.77K
-- **Success Rate**: 65.96% (93K completed rides)
-- **Cancellation Rate**: 25% (37.43K cancelled bookings)
-- **Customer Cancellations**: 19.15% (27K)
-- **Driver Cancellations**: 7.45% (10.5K)
+- **Total Bookings**: 150K
+- **Success Rate**: 62% (93K completed rides)
+- **Cancellation Rate**: 25% (37.5K cancelled bookings)
+- **Customer Cancellations**: 7% (10.5K)
+- **Driver Cancellations**: 18% (27K)
+- **Incomplete Rides**: 6% (9K)
+- **No Driver Found**: 7% (10.5K)
 
 
-## ❓ Power BI Questions Solved
+## Questions Answered in Power BI
 
-This comprehensive dashboard is organized into 5 strategic view segments, each addressing specific business analytics questions:
+The report is split into five pages, each focused on a different operational question.
 
-### 1. 📊 Overall Performance View
-- **Ride Volume Over Time** - Time-series chart tracking daily/weekly ride patterns to identify seasonal trends and demand fluctuations
-- **Booking Status Breakdown** - Pie/doughnut chart displaying proportions of completed, cancelled by customer, cancelled by driver, and other booking statuses
+### 1. Overall Performance
+- Ride volume over time, shown by month and day.
+- Booking status breakdown for completed, cancelled, incomplete, and unassigned rides.
 
-### 2. 🚗 Vehicle Type Analysis View  
-- **Top 5 Vehicle Types by Ride Distance** - Table chart ranking vehicle types (Go Mini, Go Sedan, Auto, eBike/Bike, UberXL, Premier Sedan) based on total distance covered
+### 2. Vehicle Types
+- Completed rides and distance by vehicle type.
+- A comparison of the vehicle categories used in the dataset.
 
-### 3. 💰 Revenue Analytics View
-- **Revenue by Payment Method** - Stacked bar chart breaking down revenue streams across payment channels (UPI, Cash, Credit Cards, Uber Wallet, Debit Card)
-- **Top 5 Customers by Total Booking Value** - Leaderboard visualization identifying high-value customers and their spending patterns
-- **Ride Distance Distribution Per Day** - Histogram plot revealing daily operational coverage patterns and distance distribution insights
+### 3. Revenue
+- Booking value by payment method.
+- The five customers with the highest total booking value.
+- Daily ride-distance distribution.
 
-### 4. 🚫 Cancellation Intelligence View
-- **Cancelled Rides Reasons (Customer)** - Pie chart analysis examining customer-initiated cancellation drivers (Wrong Address, Change of Plans, Driver Issues, App Problems)
-- **Cancelled Rides Reasons (Driver)** - Pie chart breakdown of driver-initiated cancellations (Customer Related Issues, Personal & Car Issues, Capacity Constraints)
+### 4. Cancellations
+- Reasons customers cancelled their bookings.
+- Reasons drivers cancelled their bookings.
 
-### 5. ⭐ Rating & Quality Assessment View
-- **Driver Ratings Distribution** - Card-based visualization displaying average driver ratings (4.23-4.24) across all vehicle types for easy comparison
-- **Customer Ratings Analysis** - Card layout showcasing customer satisfaction ratings (4.40-4.41) across vehicle categories, enabling quality benchmarking
-
-
-## 🚗 Vehicle Fleet Analysis
-
-| Vehicle Type | Total Bookings | Success Bookings | Avg Distance | Total Distance |
-|--------------|----------------|------------------|---------------|----------------|
-| Go Mini      | 10.34M         | 9.41M           | 25.99 km      | 482K km        |
-| Go Sedan     | 9.37M          | 8.54M           | 25.98 km      | 433K km        |
-| Auto         | 12.88M         | 11.73M          | 25.99 km      | 602K km        |
-| eBike/Bike   | 11.46M         | 10.44M          | 26.11 km      | 537K km        |
-| UberXL       | 1.53M          | 1.41M           | 25.72 km      | 72K km         |
-| Premier Sedan| 6.28M          | 5.73M           | 25.95 km      | 292K km        |
+### 5. Ratings
+- Average driver rating by vehicle type, between 4.23 and 4.24.
+- Average customer rating by vehicle type, between 4.40 and 4.41.
 
 
-## 📈 Dashboard Views & Features
+## Vehicle Fleet Analysis
+
+| Vehicle Type | Completed Rides | Avg Distance | Total Distance | Booking Value |
+|--------------|-----------------|--------------|----------------|---------------|
+| Auto         | 23,155          | 25.99 km     | 601.79K km     | 11.73M        |
+| Go Mini      | 18,549          | 25.99 km     | 482.09K km     | 9.41M         |
+| Go Sedan     | 16,676          | 25.98 km     | 433.20K km     | 8.54M         |
+| Bike         | 14,034          | 26.00 km     | 364.87K km     | 7.14M         |
+| Premier Sedan| 11,252          | 25.95 km     | 291.95K km     | 5.73M         |
+| eBike        | 6,551           | 26.34 km     | 172.57K km     | 3.30M         |
+| Uber XL      | 2,783           | 25.72 km     | 71.59K km      | 1.41M         |
+
+The table reports completed rides only. `Total Distance` is shown in kilometers and `Booking Value` is the sum of completed booking values.
+
+
+## Dashboard Findings
 
 ### 1. Overall Performance
 - **Ride Volume Over Time**: Monthly trend analysis showing seasonal patterns
@@ -70,10 +72,9 @@ This comprehensive dashboard is organized into 5 strategic view segments, each a
 - Notable dip in February followed by steady growth
 
 ### 2. Vehicle Type Analysis
-- Comprehensive breakdown of all vehicle categories
-- Performance metrics by vehicle type
-- Distance and booking value analysis
-- Auto rickshaws leading in total bookings (12.88M)
+- Breakdown of all vehicle categories
+- Completed rides, distance, and booking value by vehicle type
+- Auto rickshaws leading in completed rides (23.16K)
 
 ### 3. Revenue Analytics
 - **Revenue by Payment Method**: 
@@ -84,18 +85,18 @@ This comprehensive dashboard is organized into 5 strategic view segments, each a
 - **Daily Distance Distribution**: Consistent 6K-8K km range per day
 
 ### 4. Cancellation Analysis
-#### Customer Cancellations (10.6K total)
-- Wrong Address: 22.5% (2.36K)
-- Change of Plans: 21.86% (2.3K)
-- Driver Issues: 22.41% (2.35K)
-- Driver Not Moving: 22.24% (2.34K)
-- App Issues: 11% (1.16K)
+#### Customer Cancellations (10.5K total)
+- Wrong Address: 2,362
+- Change of Plans: 2,353
+- Driver is not moving towards pickup location: 2,335
+- Driver asked to cancel: 2,295
+- AC is not working: 1,155
 
-#### Driver Cancellations (28K total)
-- Customer Related Issues: 25.32% (7K)
-- Customer Behavior: 24.76% (7K)
-- Personal & Car Issues: 24.91% (7K)
-- Capacity Issues: 25% (7K)
+#### Driver Cancellations (27K total)
+- Customer related issue: 6,837
+- The customer was coughing/sick: 6,751
+- Personal & Car related issues: 6,726
+- More than permitted people in there: 6,686
 
 ### 5. Rating System
 #### Customer Ratings by Vehicle Type
@@ -128,7 +129,7 @@ The dashboard is built using the following data columns:
 ```
 
 
-## 📊 Key Visualizations
+## Visualizations
 
 1. **Time Series Analysis**: Monthly ride volume trends
 2. **Pie Charts**: Booking status and cancellation reason distributions
@@ -136,9 +137,25 @@ The dashboard is built using the following data columns:
 4. **Tables**: Vehicle type performance metrics
 5. **Histograms**: Daily distance distribution patterns
 
+## Running the Analysis Script
+
+The Python script checks the figures used in this README and prints a few extra summaries.
+
+```bash
+pip install -r requirements.txt
+python analysis/uber_analysis.py
+```
+
+It loads the CSV, converts dates and numeric columns, treats `null` as missing data, and groups the results by month, vehicle type, and cancellation reason.
+
+## Data Quality
+
+- The source contains 150,000 rows covering January 1 through December 30, 2024.
+- There are 1,233 duplicate `Booking ID` values and an overall missing-value rate of approximately 30%.
+- The vehicle table uses completed rides. The cancellation counts use all rows with the relevant cancellation status.
 
 
-## 🎯 Business Insights
+## Business Takeaways
 
 ### Strengths
 - Strong customer satisfaction (4.40+ ratings)
